@@ -62,3 +62,24 @@ h1 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+
+.name {
+  display: inline-block;
+  padding-top: .3125rem;
+  padding-bottom: .3125rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  line-height: inherit;
+  white-space: nowrap;
+  color: white !important;
+}
+
+.space{
+  width: 85%;
+}
+
+.menu-show{
+  display: block;
+  cursor: pointer;
+  color: #007bff;
+}
