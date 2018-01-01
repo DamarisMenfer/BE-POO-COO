@@ -7,13 +7,13 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Dashboard Template for Bootstrap</title>
+    <title>Interrupteurs admin</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="dashboard.css" rel="stylesheet">
+    <link href="admin_interrupteur.css" rel="stylesheet">
   </head>
 
   <body>
@@ -97,38 +97,165 @@
           <h1>Interrupteurs</h1>
 
           <div class="container">
-            <h2>Physique</h2>
-            <div class="row">
-              <div class="col-sm-2">Statut</div>
-              <div class="col-sm-2"></div>
-              <div class="col-sm-2">Nom</div>
-              <div class="col-sm-2">Activation</div>
-              <div class="col-sm-6"></div>
-            </div>
-            <div class="row">
-              <div class="col-sm-2">
-
+            <div class="containerPhysique">
+              <h2>Physique</h2>
+              <div class="row">
+                <div class="col-sm-1">Statut</div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-2">Nom</div>
+                <div class="col-sm-2">Association</div>
+                <div class="col-sm-2">Activation</div>
+                <div class="col-sm-4">Personnalisation</div>
               </div>
-              <div class="col-sm-2"></div>
-              <div class="col-sm-2">Interrupteur1</div>
-              <div class="col-sm-2">
-                <button type="button" class="btn btn-outline-success">OFF</button>
+              <!-- Exemples -->
+              <!-- Interrupteur1 -->
+              <div class="row">
+                <div class="col-sm-1">
+                  <img class="img-responsive" style="width: 15px" src="images/rouge.png" >
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-2">Interrupteur1</div>
+                <div class="col-sm-2">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a href="#">charge1</a></li>
+                      <li><a href="#">charge2</a></li>
+                      <li><a href="#">charge3</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-2">
+                  <div class="btn-group" tabindex="0">
+                    <button class="btn active btn-danger"> OFF </button>
+                    <button class="btn btn-default"> ON </button>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <button type="button" class="btn btn-outline-success">Modifier</button>
+                </div>
               </div>
-              <div class="col-sm-6"></div>
+              <!-- Interrupteur2 -->
+              <div class="row">
+                <div class="col-sm-1">
+                  <img class="img-responsive" style="width: 15px" src="images/vert.png" >
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-2">Interrupteur2</div>
+                <div class="col-sm-2">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a href="#">charge1</a></li>
+                      <li><a href="#">charge2</a></li>
+                      <li><a href="#">charge3</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-2">
+                  <div class="btn-group" tabindex="0">
+                    <button class="btn active btn-danger"> OFF </button>
+                    <button class="btn btn-default"> ON </button>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <button type="button" class="btn btn-outline-success">Modifier</button>
+                </div>
+              </div>
             </div>
-            <!-- Exemple -->
 
 
-            <h2>Virtuel</h2>
-            <div class="row">
-              <div class="col-sm-2">Statut</div>
-              <div class="col-sm-2"></div>
-              <div class="col-sm-2">Nom</div>
-              <div class="col-sm-2">Activation</div>
-              <div class="col-sm-6"></div>
+            <div class="containerVirtuel">
+              <h2>Virtuel</h2>
+              <div class="row">
+                <div class="col-sm-1">Statut</div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-2">Nom</div>
+                <div class="col-sm-2">Association</div>
+                <div class="col-sm-2">Activation</div>
+                <div class="col-sm-4">Personnalisation</div>
+              </div>
+              <!-- Exemples -->
+              <!-- Interrupteur1 -->
+              <div class="row">
+                <div class="col-sm-1">
+                  <img class="img-responsive" style="width: 15px" src="images/vert.png" >
+                </div>
+                <div class="col-sm-1">
+                  <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="col-sm-2">InterrupteurV1</div>
+                <div class="col-sm-2">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a href="#">charge1</a></li>
+                      <li><a href="#">charge2</a></li>
+                      <li><a href="#">charge3</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">groupe de charge1</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-2">
+                  <div class="btn-group" tabindex="0">
+                    <button class="btn active btn-danger"> OFF </button>
+                    <button class="btn btn-default"> ON </button>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <button type="button" class="btn btn-outline-success">Modifier</button>
+                </div>
+              </div>
+              <!-- Interrupteur2 -->
+              <div class="row">
+                <div class="col-sm-1">
+                  <img class="img-responsive" style="width: 15px" src="images/jaune.png" >
+                </div>
+                <div class="col-sm-1">
+                  <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="col-sm-2">InterrupteurV2</div>
+                <div class="col-sm-2">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a href="#">charge1</a></li>
+                      <li><a href="#">charge2</a></li>
+                      <li><a href="#">charge3</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">groupe de charge1</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-2">
+                  <div class="btn-group" tabindex="0">
+                    <button class="btn active btn-danger"> OFF </button>
+                    <button class="btn btn-default"> ON </button>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <button type="button" class="btn btn-outline-success">Modifier</button>
+                </div>
+              </div>
             </div>
-          </div>
-          <button type="button" class="btn btn-outline-primary">Ajouter</button>
+          <button type="buttonAjouter" class="btn btn-outline-primary btn-lg btn-block">Ajouter</button>
         </main>
       </div>
     </div>
@@ -140,5 +267,6 @@
     <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="../../../../assets/js/vendor/popper.min.js"></script>
     <script src="../../../../dist/js/bootstrap.min.js"></script>
+    <script src="../../../../js/bootstrap-checkbox.js"></script>
   </body>
 </html>

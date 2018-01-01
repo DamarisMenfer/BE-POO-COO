@@ -17,6 +17,10 @@ h1 {
   border-bottom: 1px solid #eee;
 }
 
+h2 {
+  margin-left: 10px;
+}
+
 /*
  * Sidebar
  */
@@ -53,11 +57,27 @@ h1 {
  * Container
  */
 .container {
-  margin-left:100px;
+  margin-left:0px;
 }
 
+.containerPhysique {
+  margin-bottom: 30px;
+  border-style: groove;
+  border-width: thin;
+  border-color: #cce7ff;
+}
+
+.containerVirtuel {
+  margin-bottom: 30px;
+  border-style: groove;
+  border-width: thin;
+  border-color: #cce7ff;
+}
+
+
 .row {
-  margin-bottom:30px;
+  margin-bottom:20px;
+  margin-left: 20px;
 }
 
 
