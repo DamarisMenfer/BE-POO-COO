@@ -1,0 +1,136 @@
+PRAGMA foreign_keys = ON;
+
+CREATE TABLE boitier IF NOT EXISTS (
+	id_boitier INTEGER PRIMARY KEY,
+	nom text NOT NULL,
+	consommation DOUBLE NOT NULL,
+	etat_sous_disjoncteurs TEXT NOT NULL
+);
+
+CREATE TABLE boitier_primaire IF NOT EXISTS (
+	id_boitier INTEGER PRIMARY KEY,
+	FOREIGN KEY(id_boitier) REFERENCES boitier(id_boitier)
+);
+
+CREATE TABLE boitier_secondaire (
+	id_boitier INTEGER PRIMARY KEY,
+	FOREIGN KEY(id_boitier) REFERENCES boitier(id_boitier)
+);
+
+CREATE TABLE source IF NOT EXISTS (
+	nom TEXT PRIMARY KEY,
+	id_boitier INTEGER NOT NULL,
+	utilisation DOUBLE NOT NULL,
+	FOREIGN KEY(id_boitier) REFERENCES boitier_primaire(id_boitier)
+) WITHOUT ROWID;
+
+CREATE TABLE charge IF NOT EXISTS (
+	numero_sortie_de_puissance INTEGER NOT NULL,
+	id_boitier_secondaire INTEGER NOT NULL,
+	nom TEXT,
+	priorite INTEGER NOT NULL,
+	calibre double NOT NULL,
+	etat_actuel INTEGER NOT NULL,
+	etat_par_defaut INTEGER NOT NULL,
+	consommation DOUBLE NOT NULL,
+	PRIMARY KEY(numero_sortie_de_puissance, id_boitier_secondaire)
+);
+
+CREATE TABLE groupe_charges IF NOT EXISTS (
+	id_groupe_charges INTEGER PRIMARY KEY,
+	nom TEXT NOT NULL,
+	etat TEXT NOT NULL, -- TODO: trigger pour gerer ça || directement en Java
+	consommation DOUBLE NOT NULL
+);
+
+CREATE TABLE interrupteur IF NOT EXISTS (
+	id_interrupteur INTEGER PRIMARY KEY,
+	nom TEXT NOT NULL,
+	id_charge INTEGER,
+	id_groupe INTEGER,
+	etat TEXT NOT NULL, -- TODO: trigger pour gerer ça || directement en Java
+	FOREIGN KEY(id_charge) REFERENCES charge(id_groupe)
+);
+
+CREATE TABLE interrupteur_physique IF NOT EXISTS (
+	id_interrupteur INTEGER PRIMARY KEY,
+	id_boitier_secondaire INTEGER,
+	FOREIGN KEY(id_interrupteur) REFERENCES interrupteur(id_interrupteur),
+	FOREIGN KEY(id_boitier_secondaire) REFERENCES boitier_secondaire(id_boitier_secondaire)
+);
+
+CREATE TABLE interrupteur_virtuel IF NOT EXISTS (
+	id_interrupteur INTEGER PRIMARY KEY,
+	FOREIGN KEY(id_interrupteur) REFERENCES interrupteur(id_interrupteur)
+);
+
+CREATE TABLE categorie IF NOT EXISTS (
+	id_categorie INTEGER PRIMARY KEY,
+	nom TEXT NOT NULL,
+	consommation DOUBLE NOT NULL
+);
+
+CREATE TABLE fil IF NOT EXISTS (
+	id_fil INTEGER PRIMARY KEY,
+	etat TEXT NOT NULL,
+	boitier_source INTEGER NOT NULL,
+	boitier_dest INTEGER NOT NULL
+);
+
+CREATE TABLE consommation_heure IF NOT EXISTS (
+	date DATE PRIMARY KEY,
+	conso_Wh_cumulee INTEGER NOT NULL,
+	id_charge INTEGER NOT NULL
+) WITHOUT ROWID;
+
+CREATE TABLE user IF NOT EXISTS (
+	id_user INTEGER PRIMARY KEY,
+	nom TEXT NOT NULL,
+	prenom TEXT NOT NULL,
+	privilege INTEGER NOT NULL,
+	h	TEXT NOT NULL
+);
+
+
+
+-- Tables d'association
+
+CREATE TABLE categorie__charge IF NOT EXISTS (
+	id_charge INTEGER,
+	id_categorie INTEGER,
+	FOREIGN KEY(id_charge) REFERENCES charge(id_charge),
+	FOREIGN KEY(id_categorie) REFERENCES categorie(id_categorie),
+	PRIMARY KEY(id_charge, id_categorie)
+) WITHOUT ROWID;
+
+CREATE TABLE categorie__groupe IF NOT EXISTS (
+	id_categorie INTEGER,
+	id_groupe_charges INTEGER,
+	FOREIGN KEY(id_categorie) REFERENCES categorie(id_categorie),
+	FOREIGN KEY(id_groupe_charges) REFERENCES groupe_charges(id_groupe_charges),
+	PRIMARY KEY(id_categorie, id_groupe_charges)
+) WITHOUT ROWID;
+
+CREATE TABLE categorie__interrupteur IF NOT EXISTS (
+	id_categorie INTEGER,
+	id_interrupteur INTEGER,
+	FOREIGN KEY(id_categorie) REFERENCES categorie(id_categorie),
+	FOREIGN KEY(id_interrupteur) REFERENCES interrupteur(id_interrupteur),
+	PRIMARY KEY(id_categorie, id_interrupteur)
+) WITHOUT ROWID;
+
+CREATE TABLE groupe__groupe IF NOT EXISTS (
+	id_groupe_source INTEGER,
+	id_groupe_dest INTEGER,
+	FOREIGN KEY(id_groupe_source) REFERENCES groupe_charges(id_groupe),
+	FOREIGN KEY(id_groupe_dest) REFERENCES groupe_charges(id_groupe),
+	PRIMARY KEY(id_groupe_source, id_source_dest)
+)
+
+CREATE TABLE charge__groupe_charges IF NOT EXISTS (
+	id_charge INTEGER,
+	id_groupe_charges INTEGER,
+	FOREIGN KEY(id_charge) REFERENCES charge(id_charge),
+	FOREIGN KEY(id_groupe_charges) REFERENCES groupe_charges(id_groupe_charges),
+	PRIMARY KEY(id_charge, id_groupe_charges)
+);
