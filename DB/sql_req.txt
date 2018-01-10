@@ -1,0 +1,10 @@
+-- Compute consumption by charge
+SELECT conso_last - conso_1j
+WHERE
+	conso_last = SELECT conso FROM Conso WHERE conso.idCharge = idCharge
+
+afficher consos dans l'ordre descendant (plus récente en haut)
+limiter le résultat à 1 ligne (LIMIT 1) -> derniere_conso
+limiter le résultat à 1 ligne à partir de la 25è (LIMIT 1 OFFSET 25) -> conso_y_a_24h
+
+jointure entre les consos et leur charge respective
