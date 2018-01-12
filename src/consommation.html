@@ -28,7 +28,7 @@
 
           <form class="form-inline mt-2 mt-md-0">
             <a id="username" class="name"></a>
-            <img width="50" height="50" class="rounded-circle" src="images/user.png">
+            <img id="userImg" width="50" height="50" class="rounded-circle" src="images/user.png">
           </form>
         </div>
       </nav>
@@ -40,19 +40,19 @@
 
           <ul class="nav nav-pills flex-column">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Consommation<span class="sr-only">(current)</span></a>
+              <a class="nav-link active" href="#" onclick="changePage(6)">Consommation</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Charges</a>
+              <a class="nav-link" href="#" onclick="changePage(7)">Charges<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Groupes</a>
+              <a class="nav-link" href="#" onclick="changePage(8)">Groupes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Interrupteurs</a>
+              <a class="nav-link" href="#" onclick="changePage(9)">Interrupteurs</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Catégories</a>
+              <a class="nav-link" href="#" onclick="changePage(10)">Catégories</a>
             </li>
           </ul>
         </nav>
@@ -135,5 +135,7 @@
     <script>window.jQuery || document.write('<script src="../dist/js/jquery.min.js"><\/script>')</script>
     <script src="../dist/js/popper.min.js"></script>
     <script src="../dist/js/bootstrap.min.js"></script>
+    <script src="../dist/js/consommation.js"></script>
+    <script src="../dist/js/java.js"></script>
   </body>
 </html>

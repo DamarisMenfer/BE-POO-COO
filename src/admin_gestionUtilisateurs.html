@@ -37,27 +37,27 @@
     <div class="container-fluid">
       <div class="row">
         <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
-          <ul class="nav nav-pills flex-column">
+          <ul class="nav nav-pills flex-column hideObject">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Utilisateurs<span class="sr-only">(current)</span></a>
+              <a class="nav-link active" href="#" onclick="changePage(0)">Utilisateurs</a>
             </li>
           </ul>
 
           <ul class="nav nav-pills flex-column">
             <li class="nav-item">
-              <a class="nav-link" href="#">Consommation</a>
+              <a class="nav-link" href="#" onclick="changePage(1)">Consommation</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Charges</a>
+              <a class="nav-link" href="#" onclick="changePage(2)">Charges<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Groupes</a>
+              <a class="nav-link" href="#" onclick="changePage(3)">Groupes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Interrupteurs</a>
+              <a class="nav-link" href="#" onclick="changePage(4)">Interrupteurs</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Catégories</a>
+              <a class="nav-link" href="#" onclick="changePage(5)">Catégories</a>
             </li>
           </ul>
         </nav>
@@ -93,5 +93,6 @@
     <script>window.jQuery || document.write('<script src="../dist/js/jquery.min.js"><\/script>')</script>
     <script src="../dist/js/popper.min.js"></script>
     <script src="../dist/js/bootstrap.min.js"></script>
+          <script src="../dist/js/java.js"></script>
   </body>
 </html>
