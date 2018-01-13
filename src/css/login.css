@@ -1,0 +1,98 @@
+body {
+    padding-top: 140px;
+    padding-bottom: 40px;
+    background-color: #eee;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-signin .form-signin-heading{
+    margin-bottom: 20px;
+    color: white;
+    background-color: #9FE855;
+    border-radius: 7px;
+
+    text-align: center;
+}
+.form-signin .checkbox {
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin input[type="login"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.btn {
+    background-color: #9FE855;
+    border-color: #9FE855;
+
+}
+
+body{
+    padding-top: 0px !important;
+}
+
+.container{
+    width: 100% !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    max-width: none !important;
+}
+
+.form-signin-heading {
+    height: 250px;
+    vertical-align: middle;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #343A40;
+    color: white;
+    font-size: 3rem !important;
+}
+
+.login-options {
+    width: 330px;
+    margin-left: 38%;
+    margin-top: 70px;
+}
+
+button{
+    border-color: #343A40 !important;
+    background: #343A40 !important;
+}
+
+#inputPassword{
+    margin-bottom: 20px;
+}
+
+#inputEmail{
+    margin-bottom: 1px;
+}
+
+label{
+    margin-bottom: 0 !important;
+}
+
+.checkbox{
+    margin-bottom: 20px;
+}

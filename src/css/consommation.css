@@ -86,3 +86,131 @@ select{
   cursor: pointer;
   color: #007bff;
 }
+
+.chartdiv {
+  width		: 100%;
+  height	: 300px;
+  font-size	: 11px;
+}
+
+.amcharts-chart-div a{
+  color: white !important;
+}
+
+.amcharts-export-menu li{
+  display: none !important;
+}
+
+.chart1 .amcharts-pie-slice {
+  fill: #108FD2 !important;
+}
+
+.chart2 g:first-child .amcharts-pie-slice {
+  fill: #F8BD19 !important;
+}
+
+.chart2 g:last-child .amcharts-pie-slice {
+  fill: #EDEDED !important;
+}
+
+.chart3 g:last-child .amcharts-pie-slice {
+  fill: #EDEDED !important;
+}
+
+.chart4 g:last-child .amcharts-pie-slice {
+  fill: #5AD02B !important;
+}
+
+.chart4 g:first-child .amcharts-pie-slice {
+  fill: #EDEDED !important;
+}
+
+#chartdivGraph {
+  width: 100%;
+  height: 500px;
+}
+
+.graph {
+  padding-bottom: 40px;
+  padding-right: 40px;
+  padding-left: 40px;
+  flex: none !important;
+  max-width: 100% !important;
+}
+
+.amChartsLegend{
+  display: none;
+}
+
+.amcharts-stock-panel-div-stockPanel1 amcharts-value-axis{
+  display: none;
+}
+
+.amcharts-stock-panel-div-stockPanel1 .amcharts-graph-column{
+  display: none;
+}
+
+.amcharts-stock-panel-div-stockPanel1 .amcharts-chart-div g:nth-child(2){
+  display: none;
+}
+
+.amcharts-stock-panel-div-stockPanel1 .amcharts-chart-div g:nth-child(3){
+  display: none;
+}
+
+.amcharts-stock-panel-div-stockPanel1 .amcharts-chart-div g:nth-child(10){
+  display: none;
+}
+
+.amcharts-stock-panel-div-stockPanel1{
+  margin-top: 20% !important;
+  position: absolute;
+}
+
+.amcharts-stock-panel-div-stockPanel0{
+  position: absolute;
+}
+
+#chartdivGraph{
+  position: absolute !important;
+  width: 93%;
+}
+
+.menu-graph{
+  position: absolute;
+  margin-top: 40%;
+  width: 100%;
+}
+
+select{
+  margin-bottom: 20px !important;
+  margin-left: 40px;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip .tooltiptext {
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+

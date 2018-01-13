@@ -58,72 +58,86 @@
         </nav>
 
         <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
-          <h1>Consommation</h1>
+          <h1 style="margin-bottom: 0px !important">Consommation</h1>
 
-          <section class="row text-center placeholders">
-            <div class="col-6 col-sm-3 placeholder">
+          <section class="row text-center     ">
+            <div class="col-6 col-sm-3 placeholder chart1">
 
-              <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-
+              <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+              <script src="https://www.amcharts.com/lib/3/pie.js"></script>
+              <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+              <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+              <script src="https://www.amcharts.com/lib/3/themes/none.js"></script>
+              <div id="chartdiv1" class="chartdiv"></div>
               <h4>Source</h4>
-              <div class="text-muted">Sur la journée</div>
             </div>
-            <div class="col-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-              <h4>Charge qui consomme le plus</h4>
-              <span class="text-muted">Sur la journée</span>
+            <div class="col-6 col-sm-3 placeholder chart2">
+              <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+              <script src="https://www.amcharts.com/lib/3/pie.js"></script>
+              <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+              <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+              <script src="https://www.amcharts.com/lib/3/themes/none.js"></script>
+              <div id="chartdiv2" class="chartdiv"></div>
+
+
+
+              <h4 href="#" data-toggle="tooltip" style="cursor: pointer" title="Charge qui consomme le plus.">Charge</h4>
+
             </div>
-            <div class="col-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-              <h4>Catégorie qui consomme le plus</h4>
-              <span class="text-muted">Sur la journée</span>
+            <div class="col-6 col-sm-3 placeholder chart3">
+              <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+              <script src="https://www.amcharts.com/lib/3/pie.js"></script>
+              <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+              <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+              <script src="https://www.amcharts.com/lib/3/themes/none.js"></script>
+              <div id="chartdiv3" class="chartdiv"></div>
+              <h4 href="#" data-toggle="tooltip" style="cursor: pointer" title="Catégorie qui consomme le plus.">Catégorie</h4>
             </div>
-            <div class="col-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-              <h4>Boitier qui consomme le plus</h4>
-              <span class="text-muted">Sur la journée</span>
+            <div class="col-6 col-sm-3 placeholder chart4">
+              <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+              <script src="https://www.amcharts.com/lib/3/pie.js"></script>
+              <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+              <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+              <script src="https://www.amcharts.com/lib/3/themes/none.js"></script>
+              <div id="chartdiv4" class="chartdiv"></div>
+              <h4 href="#" data-toggle="tooltip" style="cursor: pointer" title="Boitier qui consomme le plus.">Boitier</h4>
             </div>
           </section>
 
           <h1></h1>
+
           <section class="row text-center placeholders">
-            <div class="col-9 col-sm-6 placeholder">
-              <div>
-                <select>
-                <option disabled>-----Charges-----</option>
-                <option>Charge 1 </option>
-                <option>Charge 2</option>
 
-                <option disabled>-----Boitier-----</option>
-                <option>Boitier 1</option>
-                <option>Boitier 2</option>
-                </select>
-              </div>
 
-              <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Par jour
-                </label>
-              </div>
-              <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Par semaine
-                </label>
-              </div>
+            <div class="col-9 col-sm-6 graph placeholder" style="padding-bottom: 0px !important;">
+              <h3><strong>Graphique de Consommation</strong></h3>
+            </div>
+            <select>
+              <option disabled>-----Charges-----</option>
+              <option>Charge 1 </option>
+              <option>Charge 2</option>
+
+              <option disabled>-----Boitier-----</option>
+              <option>Boitier 1</option>
+              <option>Boitier 2</option>
+            </select>
+
+
+            <div class="col-9 col-sm-6 graph placeholder">
+              <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+              <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+              <script src="https://www.amcharts.com/lib/3/amstock.js"></script>
+              <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+              <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+              <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+              <div id="chartdivGraph"></div>
+
+              <div class="menu-graph">
+
                 <button type="button" class="btn btn-primary">Générer Rapport</button>
               </div>
-
-            <div class="col-9 col-sm-6 placeholder">
-            <h4>Consommation</h4>
-              <img class="img-responsive" style="width: 400px" src="images/exGraphique.png" >
             </div>
-
-
           </section>
-
-
-
-
         </main>
       </div>
     </div>
@@ -137,5 +151,11 @@
     <script src="../dist/js/bootstrap.min.js"></script>
     <script src="../dist/js/consommation.js"></script>
     <script src="../dist/js/java.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
   </body>
 </html>
