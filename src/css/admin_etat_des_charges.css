@@ -95,7 +95,7 @@ h2 {
 }
 
 .space{
-  width: 85%;
+  width: 90%;
 }
 
 .menu-show{
@@ -103,3 +103,20 @@ h2 {
   cursor: pointer;
   color: #007bff;
 }
+
+.col-sm-1{
+  text-align: center;
+}
+
+.col-sm-2{
+  text-align: center;
+}
+
+.col-sm-4{
+  text-align: center;
+}
+
+button{
+  width: 20%;
+}
+
