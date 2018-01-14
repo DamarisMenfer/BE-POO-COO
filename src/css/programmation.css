@@ -63,9 +63,6 @@ h1 {
   padding-bottom: 1.5rem;
 }
 
-select{
-  margin: 5px;
-}
 
 .btn{
   margin: 15px;
@@ -90,4 +87,24 @@ select{
   display: block;
   cursor: pointer;
   color: #007bff;
+}
+
+.form-check-label{
+  margin-left: 5px;
+}
+
+.check-form {
+  display: inline-flex !important;
+  margin-left: 35px;
+}
+
+.selectionPeriode{
+  width: 100% !important;
+  margin-right: 30px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  vertical-align: middle;
+  line-height: 40px;
+  margin-left: 15px;
 }

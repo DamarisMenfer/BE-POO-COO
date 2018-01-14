@@ -81,6 +81,14 @@ select{
   width: 90%;
 }
 
+.amcharts-pie-label{
+  display: none;
+}
+
+.amcharts-pie-tick{
+  display: none;
+}
+
 .menu-show{
   display: block;
   cursor: pointer;

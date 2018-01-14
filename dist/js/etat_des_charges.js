@@ -30,3 +30,16 @@ function changerEtatCharge(button) {
         img.src = "images/rouge.png";
     }
 }
+
+function planifierCharge(user) {
+    if(user == 1){
+        document.location.href = "admin_programmation.html";
+    }
+    else {
+        document.location.href = "programmation.html";
+    }
+
+}
+
+
+

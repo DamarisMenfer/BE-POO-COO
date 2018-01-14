@@ -69,11 +69,10 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-1">Statut</div>
-              <div class="col-sm-1 hideObject"></div>
               <div class="col-sm-2">Nom</div>
               <div class="col-sm-2">Association</div>
               <div class="col-sm-2">Activation</div>
-              <div class="col-sm-4 hideObject">Personnalisation</div>
+              <div class="col-sm-4">Personnalisation</div>
             </div>
             <!-- Exemples -->
             <!-- Charge1 -->
@@ -81,53 +80,69 @@
               <div class="col-sm-1">
                 <img id="img1" class="img-responsive" style="width: 15px" src="images/rouge.png" >
               </div>
-              <div id="close1" class="col-sm-1 hideObject">
-                <button type="button" class="close" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="col-sm-2">Charge1</div>
+              <div class="col-sm-2">Chambre 1</div>
               <div class="col-sm-2">
                 <div class="dropdown">
                   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <span class="caret"></span>
+                    <span class="caret">Information</span>
                   </button>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="#">Localisation</a></li>
-                    <li><a href="#">Priorité</a></li>
-                    <li><a href="#">Protection</a></li>
+                    <li><a href="#">Localisation: botier 3</a></li>
+                    <li><a href="#">Priorité: 6</a></li>
+                    <li><a href="#">Protection: 2A</a></li>
                   </ul>
                 </div>
               </div>
               <div class="col-sm-2">
-                <div id="bt1" class="btn-group" tabindex="0" onclick="changerEtatCharge(1)">
-                  <input  type="checkbox"  checked data-toggle="toggle">
+                <div id="bt1" class="btn-group off" tabindex="0" onclick="changerEtatCharge(1)">
+                  <input type="checkbox" data-toggle="toggle">
                 </div>
               </div>
               <div class="col-sm-4">
-                <button type="button" class="btn btn-outline-success hideObject">Modifier</button>
+                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#myModal1">Modifier</button>
               </div>
+
+              <div id="myModal1" class="modalDialog modal fade" role="dialog">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <a href="#close" type="button" title="Close" class="close" data-dismiss="modal">X</a>
+                    <h2 style="text-align: center; margin-left: 0px !important;">Modifier charge</h2>
+                    <div class="form-group">
+                      <label for="loc1">Localisation:</label>
+                      <input type="text" class="form-control" id="loc1" value="Botier 3">
+                    </div>
+                    <div class="form-group">
+                      <label for="prio1">Priorité:</label>
+                      <input type="text" class="form-control" id="prio1" value="6">
+                    </div>
+                    <div class="form-group">
+                      <label for="prot1">Protection:</label>
+                      <input type="text" class="form-control" id="prot1" value="2A">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Enregistrer</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
             <!-- Charge2 -->
             <div class="row">
               <div class="col-sm-1">
-                <img id="img2" class="img-responsive" style="width: 15px" src="images/rouge.png" >
+                <img id="img2" class="img-responsive" style="width: 15px" src="images/vert.png" >
               </div>
-              <div id="close2" class="col-sm-1 hideObject">
-                <button type="button" class="close" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="col-sm-2">Charge2</div>
+
+              <div class="col-sm-2">Chambre 2</div>
               <div class="col-sm-2">
                 <div class="dropdown">
-                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <span class="caret"></span>
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span class="caret">Information</span>
                   </button>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="#">Localisation</a></li>
-                    <li><a href="#">Priorité</a></li>
-                    <li><a href="#">Protection</a></li>
+                    <li><a href="#">Localisation: Botier 5</a></li>
+                    <li><a href="#">Priorité: 9</a></li>
+                    <li><a href="#">Protection: 1A</a></li>
                   </ul>
                 </div>
               </div>
@@ -136,30 +151,52 @@
                   <input  type="checkbox"  checked data-toggle="toggle">
                 </div>
               </div>
-              <div class="col-sm-4">
-                <button type="button" class="btn btn-outline-success hideObject">Modifier</button>
+              <div href="#openModal" class="col-sm-4">
+                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#myModal2">Modifier</button>
               </div>
+
+
+
+              <div id="myModal2" class="modalDialog modal fade" role="dialog">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <a href="#close" type="button" title="Close" class="close" data-dismiss="modal">X</a>
+                    <h2 style="text-align: center; margin-left: 0px !important;">Modifier charge</h2>
+                     <div class="form-group">
+                      <label for="loc2">Localisation:</label>
+                      <input type="text" class="form-control" id="loc2" value="Botier 5">
+                    </div>
+                    <div class="form-group">
+                      <label for="prio2">Priorité:</label>
+                      <input type="text" class="form-control" id="prio2" value="9">
+                    </div>
+                    <div class="form-group">
+                      <label for="prot2">Protection:</label>
+                      <input type="text" class="form-control" id="prot2" value="1A">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Enregistrer</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
             <!-- Charge3 -->
             <div class="row">
               <div class="col-sm-1">
-                <img id="img3" class="img-responsive" style="width: 15px" src="images/rouge.png" >
+                <img id="img3" class="img-responsive" style="width: 15px" src="images/vert.png" >
               </div>
-              <div id="close3" class="col-sm-1 hideObject">
-                <button type="button" class="close" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="col-sm-2">Charge3</div>
+              <div class="col-sm-2">Chambre 3</div>
               <div class="col-sm-2">
                 <div class="dropdown">
-                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <span class="caret"></span>
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span class="caret">Information</span>
                   </button>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="#">Localisation</a></li>
-                    <li><a href="#">Priorité</a></li>
-                    <li><a href="#">Protection</a></li>
+                    <li><a href="#">Localisation: botier 1</a></li>
+                    <li><a href="#">Priorité: 1</a></li>
+                    <li><a href="#">Protection: 3A</a></li>
                   </ul>
                 </div>
               </div>
@@ -169,10 +206,36 @@
                 </div>
               </div>
               <div class="col-sm-4">
-                <button type="button" class="btn btn-outline-success hideObject">Modifier</button>
+                <button ype="button" class="btn btn-outline-success" data-toggle="modal" data-target="#myModal3">Modifier</button>
               </div>
+
+              <div id="myModal3" class="modalDialog modal fade" role="dialog">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <a href="#close" type="button" title="Close" class="close" data-dismiss="modal">X</a>
+                    <h2 style="text-align: center; margin-left: 0px !important;">Modifier charge</h2>
+                    <div class="form-group">
+                      <label for="loc3">Localisation:</label>
+                      <input type="text" class="form-control" id="loc3" value="Botier 3">
+                    </div>
+                    <div class="form-group">
+                      <label for="prio3">Priorité:</label>
+                      <input type="text" class="form-control" id="prio3" value="6">
+                    </div>
+                    <div class="form-group">
+                      <label for="prot3">Protection:</label>
+                      <input type="text" class="form-control" id="prot3" value="2A">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Enregistrer</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
-            <button type="buttonPlanifier" class="btn btn-outline-primary btn-lg btn-block hideObject">Planifier</button>
+
+            <button type="buttonPlanifier" class="btn btn-outline-primary btn-lg btn-block hideObject planifier-button" onclick="planifierCharge(1)">Planifier</button>
           </div>
         </main>
       </div>

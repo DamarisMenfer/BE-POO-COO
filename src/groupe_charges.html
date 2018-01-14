@@ -74,11 +74,11 @@
               <!-- Charge1 -->
               <section class="row text-center placeholders">
                 <div class="col-2 placeholder">
-                  <img class="img-responsive" style="width: 10px" src="images/vert.png" >
+                  <img id="img1" class="img-responsive" style="width: 10px" src="images/vert.png" >
                 </div>
                 <div class="col-1 placeholder text-muted text-left">Charge1</div>
                 <div class="col-4 placeholder">
-                  <div class="btn-group" tabindex="0">
+                  <div class="btn-group" tabindex="0" onclick="changerEtatCharge(1)">
                     <input type="checkbox" checked data-toggle="toggle">
                   </div>
                 </div>
@@ -86,12 +86,12 @@
               <!-- Charge2 -->
               <section class="row text-center placeholders">
                 <div class="col-2 placeholder">
-                  <img class="img-responsive" style="width: 10px" src="images/vert.png" >
+                  <img id="img2" class="img-responsive" style="width: 10px" src="images/vert.png" >
                 </div>
                 <div class="col-1 placeholder text-muted text-left">Charge2</div>
 
                 <div class="col-4 placeholder">
-                  <div class="btn-group" tabindex="0">
+                  <div class="btn-group" tabindex="0" onclick="changerEtatCharge(2)">
                     <input type="checkbox" checked data-toggle="toggle">
                   </div>
                 </div>
@@ -99,11 +99,11 @@
               <!-- Charge3 -->
               <section class="row text-center placeholders">
                 <div class="col-2 placeholder">
-                  <img class="img-responsive" style="width: 10px" src="images/vert.png" >
+                  <img id="img3" class="img-responsive" style="width: 10px" src="images/vert.png" >
                 </div>
                 <div class="col-1 placeholder text-muted text-left">Charge3</div>
                 <div class="col-4 placeholder">
-                  <div class="btn-group" tabindex="0">
+                  <div class="btn-group" tabindex="0" onclick="changerEtatCharge(3)">
                     <input type="checkbox" checked data-toggle="toggle">
                   </div>
                 </div>
@@ -127,19 +127,19 @@
                 </div>
                 <div class="col-1 placeholder text-muted text-left">Charge4</div>
                 <div class="col-4 placeholder text-muted">
-                  <div class="btn-group" tabindex="0">
-                    <input type="checkbox" checked data-toggle="toggle">
+                  <div class="btn-group off" tabindex="0" onclick="changerEtatCharge(4)">
+                    <input id="img4" type="checkbox" checked data-toggle="toggle">
                   </div>
                 </div>
               </section>
               <!-- Charge5 -->
               <section class="row text-center placeholders">
                 <div class="col-2 placeholder">
-                  <img class="img-responsive" style="width: 10px" src="images/vert.png" >
+                  <img id="img5" class="img-responsive" style="width: 10px" src="images/vert.png" >
                 </div>
                 <div class="col-1 placeholder text-muted text-left">Charge5</div>
                 <div class="col-4 placeholder text-muted">
-                  <div class="btn-group" tabindex="0">
+                  <div class="btn-group" tabindex="0" onclick="changerEtatCharge(5)">
                     <input type="checkbox" checked data-toggle="toggle">
                   </div>
                 </div>
@@ -158,6 +158,7 @@
     <script src="../dist/js/popper.min.js"></script>
     <script src="../dist/js/bootstrap.min.js"></script>
     <script src="../dist/js/bootstrap-toggle.min.js"></script>
+    <script src="../dist/js/groupe_charges.js"></script>
     <script src="../dist/js/java.js"></script>
   </body>
 </html>

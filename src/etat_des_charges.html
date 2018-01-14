@@ -13,7 +13,7 @@
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="./css/etat_des_charges.css" rel="stylesheet">
+    <link href="./css/admin_etat_des_charges.css" rel="stylesheet">
     <link href="../dist/css/bootstrap-toggle.min.css" rel="stylesheet">
   </head>
 
@@ -66,81 +66,89 @@
               <div class="col-sm-2">Statut</div>
               <div class="col-sm-2">Nom</div>
               <div class="col-sm-2">Association</div>
-              <div class="col-sm-6">Activation</div>
+              <div class="col-sm-2">Activation</div>
             </div>
             <!-- Exemples -->
             <!-- Charge1 -->
-            <div class="row">
-              <div class="col-sm-2">
-                <img id="img1" class="img-responsive" style="width: 15px" src="images/vert.png" >
+              <!-- Charge1 -->
+              <div class="row">
+                  <div class="col-sm-2">
+                      <img id="img1" class="img-responsive" style="width: 15px" src="images/rouge.png" >
+                  </div>
+                  <div class="col-sm-2">Chambre 1</div>
+                  <div class="col-sm-2">
+                      <div class="dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                              <span class="caret">Information</span>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                              <li><a href="#">Localisation: botier 3</a></li>
+                              <li><a href="#">Priorité: 6</a></li>
+                              <li><a href="#">Protection: 2A</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-sm-2">
+                      <div id="bt1" class="btn-group off" tabindex="0" onclick="changerEtatCharge(1)">
+                          <input type="checkbox" data-toggle="toggle">
+                      </div>
+                  </div>
+
+
               </div>
-              <div class="col-sm-2">Charge1</div>
-              <div class="col-sm-2">
-                <div class="dropdown">
-                  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="#">Localisation</a></li>
-                    <li><a href="#">Priorité</a></li>
-                    <li><a href="#">Protection</a></li>
-                  </ul>
-                </div>
+              <!-- Charge2 -->
+              <div class="row">
+                  <div class="col-sm-2">
+                      <img id="img2" class="img-responsive" style="width: 15px" src="images/vert.png" >
+                  </div>
+
+                  <div class="col-sm-2">Chambre 2</div>
+                  <div class="col-sm-2">
+                      <div class="dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                              <span class="caret">Information</span>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                              <li><a href="#">Localisation: Botier 5</a></li>
+                              <li><a href="#">Priorité: 9</a></li>
+                              <li><a href="#">Protection: 1A</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-sm-2">
+                      <div id="bt2" class="btn-group" tabindex="0" onclick="changerEtatCharge(2)">
+                          <input  type="checkbox"  checked data-toggle="toggle">
+                      </div>
+                  </div>
+
+
               </div>
-              <div class="col-sm-6">
-                <div id="bt1" class="btn-group" tabindex="0" onclick="changerEtatCharge(1)">
-                  <input type="checkbox" checked data-toggle="toggle">
-                </div>
+              <!-- Charge3 -->
+              <div class="row">
+                  <div class="col-sm-2">
+                      <img id="img3" class="img-responsive" style="width: 15px" src="images/vert.png" >
+                  </div>
+                  <div class="col-sm-2">Chambre 3</div>
+                  <div class="col-sm-2">
+                      <div class="dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                              <span class="caret">Information</span>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                              <li><a href="#">Localisation: botier 1</a></li>
+                              <li><a href="#">Priorité: 1</a></li>
+                              <li><a href="#">Protection: 3A</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-sm-2">
+                      <div id="bt3" class="btn-group" tabindex="0" onclick="changerEtatCharge(3)">
+                          <input  type="checkbox"  checked data-toggle="toggle">
+                      </div>
+                  </div>
+
               </div>
-            </div>
-            <!-- Charge2 -->
-            <div class="row">
-              <div class="col-sm-2">
-                <img id="img2" class="img-responsive" style="width: 15px" src="images/vert.png" >
-              </div>
-              <div class="col-sm-2">Charge2</div>
-              <div class="col-sm-2">
-                <div class="dropdown">
-                  <button class="btn btn-default dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="#">Localisation</a></li>
-                    <li><a href="#">Priorité</a></li>
-                    <li><a href="#">Protection</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div id="bt2" class="btn-group" tabindex="0" onclick="changerEtatCharge(2)">
-                  <input type="checkbox" checked data-toggle="toggle">
-                </div>
-              </div>
-            </div>
-            <!-- Charge3 -->
-            <div class="row">
-              <div class="col-sm-2">
-                <img id="img3" class="img-responsive" style="width: 15px" src="images/rouge.png" >
-              </div>
-              <div class="col-sm-2">Charge3</div>
-              <div class="col-sm-2">
-                <div class="dropdown">
-                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="#">Localisation</a></li>
-                    <li><a href="#">Priorité</a></li>
-                    <li><a href="#">Protection</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div id="bt3" class="btn-group" tabindex="0" onclick="changerEtatCharge(3)">
-                  <input  type="checkbox"  checked data-toggle="toggle">
-                </div>
-              </div>
-            </div>
+            <button type="buttonPlanifier" style="margin-left: 43%; " class="btn btn-outline-primary btn-lg btn-block hideObject planifier-button" onclick="planifierCharge(2)">Planifier</button>
           </div>
         </main>
       </div>
